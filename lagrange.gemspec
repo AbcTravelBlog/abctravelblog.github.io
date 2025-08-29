@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Justin Liao"]
   spec.email         = ["hello@paulle.ca"]
 
-  spec.summary       = "A blog that will prepare you for your trip to Taiwan!"
+  spec.summary       = "A blog that will prepare you for your trip to Taiwan"
   spec.homepage      = "https://abctravelblog.github.io/"
   spec.license       = "MIT"
 
