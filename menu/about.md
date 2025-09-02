@@ -1,19 +1,7 @@
 ---
 layout: page
-title: Welcome to Lagrange!
+title: Welcome to ABC Travel Blog!
 permalink: /about
 ---
 
-Lagrange is a minimalist Jekyll theme. The purpose of this theme is to provide a simple, clean, content-focused blogging platform for your personal site or blog. Below you can find everything you need to get started.
-
-### Getting Started
-
-[Getting Started]({{ site.github.url }}{% post_url 2015-10-10-getting-started %}): getting started with installing Lagrange, whether you are completely new to using Jekyll, or simply just migrating to a new Jekyll theme.
-
-### Example Content
-
-[Text and Formatting]({{ site.github.url }}{% post_url 2014-01-01-text-formatting-examples %})
-
-### Questions?
-
-This theme is completely free and open source software. You may use it however you want, as it is distributed under the [MIT License](http://choosealicense.com/licenses/mit/). If you are having any problems, any questions or suggestions, feel free to [tweet at me](https://twitter.com/intent/tweet?text=My%question%about%Lagrange%is:%&amp;via=paululele), or [file a GitHub issue](https://github.com/lenpaul/lagrange/issues/new).
+Hi everyone, welcome to the ABC Travel Blog! The purpose of this blog is to provide English speakers with a guide to the beautiful island of Taiwan! The focus is to be a quality blog with insights from native Taiwanese to make the most out of your Taiwan trip. Now, why should you go to Taiwan when there’s so many other amazing destinations around East Asia? One word, convenience. Whether you decide to stay around the metropolitan areas, or go off the beaten path to explore the nature and tranquility of the countryside, everything is extremely convenient to get to with Taiwan’s plethora of transportation modes. I guarantee after you visit Taiwan, you will be fascinated by how much this tiny island actually has to offer. I hope that, even if you have the slightest interest in visiting Taiwan someday, that I am able to assist in whatever ways you need to make this a trip of a lifetime.
