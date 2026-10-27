@@ -2,6 +2,12 @@
 layout: default
 ---
 
+<div class="home-hero-intro">
+  <p class="hero-tagline">
+    <strong>Welcome to ABC Travel Blog!</strong> Discover native travel insights, hidden food spots, night market guides, and scenic nature trails across the beautiful island of Taiwan.
+  </p>
+</div>
+
 {% for post in paginator.posts %}
   <div class="posts-container">
     <h1>
@@ -9,7 +15,7 @@ layout: default
     </h1>
     {% if post.image %}
       <div class="thumbnail-container">
-        <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}"></a>
+        <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}" alt="{{ post.title }}"></a>
       </div>
     {% endif %}
     <p>

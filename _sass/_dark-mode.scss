@@ -1,0 +1,136 @@
+/*
+  Dark Mode
+*/
+
+#darkModeToggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: $light-gray-color;
+  padding: 0 6px;
+  vertical-align: middle;
+  outline: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    color: #f59e0b;
+    transform: scale(1.15);
+  }
+}
+
+html.dark-theme,
+body.dark-theme {
+  background-color: #16181a;
+  color: #d1d5db;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #f3f4f6;
+  }
+
+  h1 a, .header-title a {
+    color: #f3f4f6;
+  }
+
+  a {
+    color: #93c5fd;
+
+    &:hover {
+      color: #bfdbfe;
+    }
+  }
+
+  .header-subtitle,
+  .footer,
+  .footer a,
+  .footer-description,
+  .post-date,
+  .menu-content a,
+  .social-icons a {
+    color: #9ca3af;
+  }
+
+  .header a:hover,
+  .footer a:hover,
+  .menu-content a:hover,
+  .social-icons a:hover {
+    color: #ffffff;
+  }
+
+  #darkModeToggle {
+    color: #facc15;
+  }
+
+  blockquote {
+    border-left-color: #374151;
+    color: #9ca3af;
+  }
+
+  hr {
+    border-top-color: #374151;
+  }
+
+  table, th, td {
+    border-color: #374151;
+  }
+
+  .pagination-button {
+    border-color: #374151;
+    color: #9ca3af;
+  }
+
+  .pagination-active {
+    color: #93c5fd;
+
+    &:hover {
+      background-color: #1f2937;
+    }
+  }
+
+  .home-hero-intro {
+    background-color: #1f2428;
+    border-left-color: #3b82f6;
+
+    .hero-tagline {
+      color: #e5e7eb;
+    }
+  }
+
+  .contact-form {
+    input, textarea {
+      background-color: #1f2428;
+      color: #f3f4f6;
+      border-color: #374151;
+
+      &:focus {
+        border-color: #60a5fa;
+        outline: none;
+      }
+    }
+
+    .submit-button {
+      background-color: #2563eb;
+      color: #ffffff;
+
+      &:hover {
+        background-color: #1d4ed8;
+      }
+    }
+  }
+
+  .gallery-item {
+    background-color: #1f2428;
+    border-color: #2e3440;
+
+    .gallery-caption {
+      color: #e5e7eb;
+      span {
+        color: #9ca3af;
+      }
+    }
+  }
+
+  code, pre {
+    background-color: #111827;
+  }
+}

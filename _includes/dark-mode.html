@@ -1,3 +1,36 @@
-<button id="darkModeToggle" aria-label="Toggle dark mode" style="background:none;border:none;cursor:pointer;">
-  <i id="modeIcon" class="fas fa-moon"></i>
+<button id="darkModeToggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+  <i id="modeIcon" class="fa fa-moon-o" aria-hidden="true"></i>
 </button>
+<script>
+  (function() {
+    var toggle = document.getElementById('darkModeToggle');
+    var icon = document.getElementById('modeIcon');
+    
+    function updateIcon(isDark) {
+      if (!icon) return;
+      if (isDark) {
+        icon.className = 'fa fa-sun-o';
+      } else {
+        icon.className = 'fa fa-moon-o';
+      }
+    }
+
+    var isDark = document.body.classList.contains('dark-theme');
+    updateIcon(isDark);
+
+    if (toggle) {
+      toggle.addEventListener('click', function(e) {
+        e.preventDefault();
+        var nextDark = !document.body.classList.contains('dark-theme');
+        if (nextDark) {
+          document.body.classList.add('dark-theme');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.body.classList.remove('dark-theme');
+          localStorage.setItem('theme', 'light');
+        }
+        updateIcon(nextDark);
+      });
+    }
+  })();
+</script>

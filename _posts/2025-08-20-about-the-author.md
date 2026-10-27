@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "About the Author"
-author: "Paul Le"
-categories: journal
-tags: [documentation,sample]
+title: "About the Author: Welcome to ABC Travel Blog"
+author: "Justin Liao"
+categories: travel
+tags: [taiwan, intro, guide]
 image: cutting.jpg
 ---
 

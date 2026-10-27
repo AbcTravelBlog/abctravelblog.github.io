@@ -1,4 +1,37 @@
-# Lagrange
+# ABC Travel Blog (Taiwan Insider Guides)
+
+ABC Travel Blog is a modern, fast static travel blog tailored for exploring Taiwan. Built on Jekyll and fully compatible with GitHub Pages, it features responsive widescreen headers, dark mode, photo galleries, and streamlined author workflows.
+
+---
+
+### Project & Setup Notes
+
+#### 1. Custom Domain Setup (Issue #7)
+To connect a purchased custom domain (e.g., `abctravelblog.com`):
+1. In your domain registrar (Namecheap, GoDaddy, Cloudflare, Google Domains), configure DNS records:
+   - **Apex domain (`@`)**: Add 4 `A` records pointing to GitHub Pages IPs:
+     ```
+     185.199.108.153
+     185.199.109.153
+     185.199.110.153
+     185.199.111.153
+     ```
+   - **Subdomain (`www`)**: Add a `CNAME` record pointing to `<username>.github.io`.
+2. Add a `CNAME` file to the root of the repository containing your domain name (e.g., `abctravelblog.com`).
+3. In repository **Settings > Pages**, enter your custom domain and check **Enforce HTTPS**.
+
+#### 2. Private Repository Hosting (Issue #13)
+This repo includes an automated GitHub Actions deployment workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+- You can keep this repository private while still deploying publicly to GitHub Pages for free.
+- In GitHub **Settings > Pages > Source**, select **GitHub Actions**. Every push to `main` will build Jekyll and publish your site automatically.
+
+#### 3. Analytics & Comments Configuration
+- **Google Analytics 4 (Issue #15)**: Set your Measurement ID (`G-XXXXXXXXXX`) in [`_data/settings.yml`](_data/settings.yml) under `google-ID`.
+- **Disqus Comments (Issue #14)**: Set `comments: true` and configure your `disqus_shortname` in [`_data/settings.yml`](_data/settings.yml).
+
+---
+
+# Lagrange Theme Base
 
 Lagrange is a minimalist Jekyll theme for running a personal blog or site for free through [Github Pages](https://pages.github.com/), or on your own server. Everything that you will ever need to know about this Jekyll theme is included in the README below, which you can also find in [the demo site](https://lenpaul.github.io/Lagrange/). For a guide on how to deploy a Jekyll site using GitHub Pages, please check out [this article](https://paulle.ca/jekyll-tutorials/deploy-jekyll-site-github-pages).
 

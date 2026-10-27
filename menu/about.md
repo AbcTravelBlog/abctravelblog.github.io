@@ -1,7 +1,32 @@
 ---
 layout: page
-title: Welcome to ABC Travel Blog!
+title: About ABC Travel Blog
 permalink: /about
 ---
 
-Hi everyone, welcome to the ABC Travel Blog! The purpose of this blog is to provide English speakers with a guide to the beautiful island of Taiwan! The focus is to be a quality blog with insights from native Taiwanese to make the most out of your Taiwan trip. Now, why should you go to Taiwan when there’s so many other amazing destinations around East Asia? One word, convenience. Whether you decide to stay around the metropolitan areas, or go off the beaten path to explore the nature and tranquility of the countryside, everything is extremely convenient to get to with Taiwan’s plethora of transportation modes. I guarantee after you visit Taiwan, you will be fascinated by how much this tiny island actually has to offer. I hope that, even if you have the slightest interest in visiting Taiwan someday, that I am able to assist in whatever ways you need to make this a trip of a lifetime.
+### Welcome Travelers! 👋
+
+Welcome to **ABC Travel Blog**! Our mission is to provide English speakers, backpackers, culture enthusiasts, and curious travelers with an authentic, practical guide to exploring the incredible island of **Taiwan**.
+
+Written and curated with native Taiwanese insights, our articles help you look past standard tourist brochures to uncover hidden local foodie stalls, serene alpine trails, and effortless transit tips.
+
+---
+
+### Why Visit Taiwan? 🇹🇼
+
+What makes Taiwan one of the most rewarding travel destinations in East Asia? **Unmatched convenience, safety, and diversity.**
+
+- **🚅 Effortless Connectivity**: Ride the High Speed Rail (THSR) along the entire western coast in under two hours, navigate Taipei and Kaohsiung seamlessly via the MRT, or grab a YouBike right on the street corner.
+- **🍜 World-Class Food Culture**: From sizzling scallion pancakes, soup dumplings (xiao long bao), and beef noodles to bustling night markets and mountaintop tea plantations in Maokong.
+- **⛰️ Dramatic Nature**: Journey in a single morning from neon-lit skyscrapers to 3,000-meter peaks in Taroko Gorge, mystical cypress forests in Alishan, and Pacific coast beaches.
+- **🤝 Genuine Hospitality**: Consistently celebrated as one of the friendliest, safest destinations in the world for solo travelers and families.
+
+---
+
+### What You'll Find On This Blog
+
+1. **Detailed Travel Guides**: Step-by-step itineraries for Taipei, Taichung, Tainan, Kaohsiung, and Hualien.
+2. **Food & Night Market Deep Dives**: What to order, how to navigate stalls like a local, and dietary tips.
+3. **Outdoor Adventures**: Best hiking trails, scenic cycling routes, and hot springs.
+
+Have travel questions, feedback, or suggestions? Head over to our [Contact page](/contact) or check out our latest articles on the [Writing page](/writing). We hope this blog helps make your Taiwan journey unforgettable!

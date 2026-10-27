@@ -5,3 +5,7 @@ Gemfile.lock
 .jekyll-metadata
 .DS_Store
 .jekyll-cache
+.claude
+.agents
+.lavish
+skills-lock.json

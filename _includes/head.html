@@ -10,6 +10,18 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/main.css">
   <link rel="stylesheet" href="{{ site.github.url }}/assets/css/syntax.css">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (saved === 'dark' || (!saved && prefersDark)) {
+        document.documentElement.classList.add('dark-theme');
+        document.addEventListener('DOMContentLoaded', function() {
+          document.body.classList.add('dark-theme');
+        });
+      }
+    })();
+  </script>
   <!-- Use Atom -->
   {% feed_meta %}
   <!-- Use RSS-2.0 -->
