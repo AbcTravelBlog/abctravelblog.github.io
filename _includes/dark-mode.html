@@ -6,30 +6,28 @@
     var toggle = document.getElementById('darkModeToggle');
     var icon = document.getElementById('modeIcon');
     
-    function updateIcon(isDark) {
-      if (!icon) return;
+    function applyTheme(isDark) {
       if (isDark) {
-        icon.className = 'fa fa-sun-o';
+        document.documentElement.classList.add('dark-theme');
+        if (document.body) document.body.classList.add('dark-theme');
+        if (icon) icon.className = 'fa fa-sun-o';
+        localStorage.setItem('theme', 'dark');
       } else {
-        icon.className = 'fa fa-moon-o';
+        document.documentElement.classList.remove('dark-theme');
+        if (document.body) document.body.classList.remove('dark-theme');
+        if (icon) icon.className = 'fa fa-moon-o';
+        localStorage.setItem('theme', 'light');
       }
     }
 
-    var isDark = document.body.classList.contains('dark-theme');
-    updateIcon(isDark);
+    var isDark = document.documentElement.classList.contains('dark-theme');
+    applyTheme(isDark);
 
     if (toggle) {
       toggle.addEventListener('click', function(e) {
         e.preventDefault();
-        var nextDark = !document.body.classList.contains('dark-theme');
-        if (nextDark) {
-          document.body.classList.add('dark-theme');
-          localStorage.setItem('theme', 'dark');
-        } else {
-          document.body.classList.remove('dark-theme');
-          localStorage.setItem('theme', 'light');
-        }
-        updateIcon(nextDark);
+        var currentlyDark = document.documentElement.classList.contains('dark-theme');
+        applyTheme(!currentlyDark);
       });
     }
   })();

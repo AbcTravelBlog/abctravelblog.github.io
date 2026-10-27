@@ -16,9 +16,8 @@
       var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
       if (saved === 'dark' || (!saved && prefersDark)) {
         document.documentElement.classList.add('dark-theme');
-        document.addEventListener('DOMContentLoaded', function() {
-          document.body.classList.add('dark-theme');
-        });
+      } else {
+        document.documentElement.classList.remove('dark-theme');
       }
     })();
   </script>

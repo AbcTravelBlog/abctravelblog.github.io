@@ -20,9 +20,10 @@
 }
 
 html.dark-theme,
+html.dark-theme body,
 body.dark-theme {
-  background-color: #16181a;
-  color: #d1d5db;
+  background-color: #16181a !important;
+  color: #d1d5db !important;
 
   h1, h2, h3, h4, h5, h6 {
     color: #f3f4f6;

@@ -2,11 +2,20 @@
   Base
 */
 
+html {
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
 body {
   font-family: $serif-font-family;
   font-size: 18px;
   color: $body-color;
+  background-color: #ffffff;
+  min-height: 100vh;
+  margin: 0;
   line-height: 1.75rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 @media (max-width: $elements-responsive-width) {
