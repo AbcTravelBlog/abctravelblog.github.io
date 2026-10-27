@@ -2,38 +2,154 @@
 layout: default
 ---
 
-<div class="home-hero-intro">
-  <p class="hero-tagline">
-    <strong>Welcome to ABC Travel Blog!</strong> Discover native travel insights, hidden food spots, night market guides, and scenic nature trails across the beautiful island of Taiwan.
-  </p>
-</div>
-
-{% for post in paginator.posts %}
-  <div class="posts-container">
-    <h1>
-      <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
-    </h1>
-    {% if post.image %}
-      <div class="thumbnail-container">
-        <a href="{{ site.github.url }}{{ post.url }}"><img src="{{ site.github.url }}/assets/img/{{ post.image }}" alt="{{ post.title }}"></a>
-      </div>
-    {% endif %}
-    <p>
-      {{ post.content | strip_html | truncate: 350 }} <a href="{{ site.github.url }}{{ post.url }}">Read more</a>
-      <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.date | date_to_string }} - <i class="fa fa-clock-o" aria-hidden="true"></i> {% include read-time.html %}</span>
+<!-- Taiwan Obsessed Style Hero Section -->
+<section class="home-hero-section">
+  <div class="hero-bg-overlay"></div>
+  <div class="hero-content-wrapper">
+    <span class="hero-kicker">NATIVE INSIDER TRAVEL GUIDES</span>
+    <h1 class="hero-headline">The Ultimate Taiwan Travel Blog</h1>
+    <p class="hero-subhead">
+      Your one-stop spot for exploring Taiwan: vibrant night markets, marble canyon hikes, alpine bike routes, and practical transit secrets.
     </p>
+
+    <!-- Quick Category Filter Pills -->
+    <div class="hero-category-pills">
+      <a href="{{ site.github.url }}/writing" class="pill-btn active"><i class="fa fa-compass"></i> All Guides</a>
+      <a href="{{ site.github.url }}/taipei-night-markets-guide" class="pill-btn"><i class="fa fa-cutlery"></i> Night Markets</a>
+      <a href="{{ site.github.url }}/hiking-taroko-gorge" class="pill-btn"><i class="fa fa-tree"></i> Taroko & Nature</a>
+      <a href="{{ site.github.url }}/cycling-sun-moon-lake" class="pill-btn"><i class="fa fa-bicycle"></i> Cycling & Lakes</a>
+      <a href="{{ site.github.url }}/gallery" class="pill-btn"><i class="fa fa-camera"></i> Photo Library</a>
+    </div>
   </div>
-{% endfor %}
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-button pagination-active next" href="{{ site.github.url }}{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
-  {% else %}
-    <span class="pagination-button">{{ site.data.settings.pagination.previous_page }}</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
-  {% else %}
-    <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
-  {% endif %}
+</section>
+
+<!-- Main Container with Magazine Grid and Sidebar -->
+<div class="page-container">
+  <div class="magazine-layout">
+    
+    <!-- Primary Content Area -->
+    <div class="magazine-main">
+      <div class="section-header">
+        <h2 class="section-title">Latest Travel Guides & Articles</h2>
+        <span class="section-subtitle">Freshly curated itineraries and food crawls</span>
+      </div>
+
+      <div class="articles-grid">
+        {% for post in paginator.posts %}
+          <article class="article-card">
+            {% if post.image %}
+              <div class="card-media">
+                <a href="{{ site.github.url }}{{ post.url }}" class="media-link">
+                  <img src="{{ site.github.url }}/assets/img/{{ post.image }}" alt="{{ post.title }}" loading="lazy">
+                </a>
+                {% if post.categories %}
+                  <span class="card-category-badge">{{ post.categories | first | capitalize }}</span>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="meta-date"><i class="fa fa-calendar-o"></i> {{ post.date | date: "%b %-d, %Y" }}</span>
+                <span class="meta-divider">•</span>
+                <span class="meta-readtime"><i class="fa fa-clock-o"></i> {% include read-time.html %}</span>
+              </div>
+
+              <h3 class="card-title">
+                <a href="{{ site.github.url }}{{ post.url }}">{{ post.title }}</a>
+              </h3>
+
+              <p class="card-excerpt">
+                {{ post.content | strip_html | truncate: 160 }}
+              </p>
+
+              <div class="card-footer">
+                <a href="{{ site.github.url }}{{ post.url }}" class="read-more-link">
+                  Read Full Guide <i class="fa fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+
+      <!-- Pagination -->
+      <nav class="magazine-pagination" aria-label="Pagination Navigation">
+        {% if paginator.next_page %}
+          <a class="pagination-btn active prev-btn" href="{{ site.github.url }}{{ paginator.next_page_path }}">
+            <i class="fa fa-angle-left"></i> {{ site.data.settings.pagination.previous_page }}
+          </a>
+        {% else %}
+          <span class="pagination-btn disabled prev-btn"><i class="fa fa-angle-left"></i> {{ site.data.settings.pagination.previous_page }}</span>
+        {% endif %}
+
+        <span class="page-indicator">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+
+        {% if paginator.previous_page %}
+          <a class="pagination-btn active next-btn" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">
+            {{ site.data.settings.pagination.next_page }} <i class="fa fa-angle-right"></i>
+          </a>
+        {% else %}
+          <span class="pagination-btn disabled next-btn">{{ site.data.settings.pagination.next_page }} <i class="fa fa-angle-right"></i></span>
+        {% endif %}
+      </nav>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="magazine-sidebar">
+      
+      <!-- Author Card -->
+      <div class="sidebar-widget author-card-widget">
+        <div class="author-avatar-wrapper">
+          <img src="{{ site.github.url }}/assets/img/banner.jpg" alt="Justin Liao" class="author-avatar">
+        </div>
+        <h4 class="author-name">Hi, I'm {{ site.author }} 👋</h4>
+        <span class="author-title">Native Taiwanese Travel Enthusiast</span>
+        <p class="author-bio">
+          Born and raised in Taiwan, I created this blog to provide unvarnished, authentic advice so you can experience Taiwan like a local—from secret night market stalls to quiet mountain lookouts.
+        </p>
+        <a href="{{ site.github.url }}/about" class="sidebar-btn">About My Story →</a>
+      </div>
+
+      <!-- Taiwan Travel Essentials Widget -->
+      <div class="sidebar-widget essentials-widget">
+        <h4 class="widget-title"><i class="fa fa-bolt"></i> Taiwan Essentials</h4>
+        <ul class="essentials-list">
+          <li>
+            <a href="{{ site.github.url }}/taipei-night-markets-guide">
+              <strong>Night Markets 101</strong>
+              <span>Must-eat dishes & payment tips</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ site.github.url }}/hiking-taroko-gorge">
+              <strong>Taroko Gorge Guide</strong>
+              <span>Trails, passes, and transit info</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ site.github.url }}/cycling-sun-moon-lake">
+              <strong>Sun Moon Lake Cycling</strong>
+              <span>Scenic overwater bikeway routes</span>
+            </a>
+          </li>
+          <li>
+            <a href="{{ site.github.url }}/gallery">
+              <strong>Photo Library</strong>
+              <span>Curated travel landscapes</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Quick Contact Widget -->
+      <div class="sidebar-widget newsletter-widget">
+        <h4 class="widget-title"><i class="fa fa-envelope-o"></i> Planning a Trip?</h4>
+        <p class="widget-desc">Have questions about your Taiwan itinerary or need transit advice? Send a message anytime!</p>
+        <a href="{{ site.github.url }}/contact" class="sidebar-btn primary-btn">Contact Justin →</a>
+      </div>
+
+    </aside>
+
+  </div>
 </div>

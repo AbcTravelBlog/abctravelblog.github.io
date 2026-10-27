@@ -1,31 +1,160 @@
 /*
-  Post
+  Single Article View - Editorial Style (Taiwan Obsessed Inspired)
 */
 
-.post-date {
-  display: block;
-  margin-top:3px;
-  margin-bottom: 1rem;
-  color: $light-gray-color;
-  font-family: $sans-serif-font-family;
-  font-size:0.8rem;
+.single-post-article {
+  max-width: 840px;
+  margin: 2.5rem auto 5rem;
+  padding: 0 1.5rem;
 }
 
-@media (max-width: $elements-responsive-width) {
-  .posts h1 {
-    font-size: 1.5rem;
+.post-header-container {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.post-category-tag {
+  margin-bottom: 1rem;
+
+  span {
+    display: inline-block;
+    background-color: #dc2626;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    padding: 5px 14px;
+    border-radius: 9999px;
   }
 }
 
-.related {
-  padding-bottom: 2rem;
+.post-headline {
+  font-family: 'Prata', Georgia, serif;
+  font-size: 2.85rem;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 1.25rem;
 }
 
-.related-posts {
-  padding-left: 0px;
-  list-style: none;
+.post-byline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  color: #64748b;
+
+  .byline-sep {
+    color: #cbd5e1;
+  }
 }
 
-.related-posts a {
-  text-decoration: none;
+.post-featured-media {
+  margin-bottom: 3rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08);
+
+  img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+  }
+}
+
+.post-body-content {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 3rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: #334155;
+
+  h2 {
+    font-size: 1.95rem;
+    color: #0f172a;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 1.45rem;
+    color: #1e293b;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+
+  ul, ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  img {
+    border-radius: 8px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.post-end-matter {
+  margin-top: 3.5rem;
+}
+
+.post-share-section {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+
+  .share-title {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 0.95rem;
+  }
+}
+
+.post-comments-section {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 2.5rem;
+  margin-top: 3rem;
+
+  .comments-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-headline {
+    font-size: 2.15rem;
+  }
+  .post-body-content {
+    padding: 1.75rem 1.25rem;
+    font-size: 1.02rem;
+  }
+  .post-share-section {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
 }

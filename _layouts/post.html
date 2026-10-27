@@ -2,24 +2,56 @@
 layout: default
 ---
 
-<h1>
-  {{ page.title }}
-</h1>
-{% if page.image %}
-  <img src="{{ site.github.url }}/assets/img/{{ page.image }}">
-{% endif %}
-<article>
-  {{ content }}
+<article class="single-post-article">
+  <div class="post-header-container">
+    {% if page.categories %}
+      <div class="post-category-tag">
+        <span>{{ page.categories | first | upcase }}</span>
+      </div>
+    {% endif %}
+
+    <h1 class="post-headline">
+      {{ page.title }}
+    </h1>
+
+    <div class="post-byline">
+      <span class="byline-author"><i class="fa fa-user-circle-o"></i> By {{ page.author | default: site.author }}</span>
+      <span class="byline-sep">•</span>
+      <span class="byline-date"><i class="fa fa-calendar-o"></i> {{ page.date | date: "%B %-d, %Y" }}</span>
+      <span class="byline-sep">•</span>
+      <span class="byline-readtime"><i class="fa fa-clock-o"></i> {% include read-time.html %}</span>
+    </div>
+  </div>
+
+  {% if page.image %}
+    <div class="post-featured-media">
+      <img src="{{ site.github.url }}/assets/img/{{ page.image }}" alt="{{ page.title }}">
+    </div>
+  {% endif %}
+
+  <div class="post-body-content">
+    {{ content }}
+  </div>
+
+  <div class="post-end-matter">
+    {% if site.hide_post_share != true %}
+      <div class="post-share-section">
+        <span class="share-title">{{ site.data.settings.sharing_button_prompt }}</span>
+        {% include social-sharing.html %}
+      </div>
+    {% endif %}
+
+    {% if site.hide_related_posts != true %}
+      <div class="post-related-section">
+        {% include related-posts.html %}
+      </div>
+    {% endif %}
+
+    {% if site.data.settings.disqus.comments %}
+      <div class="post-comments-section">
+        <h3 class="comments-heading"><i class="fa fa-comments-o"></i> Join the Discussion</h3>
+        {% include disqus.html %}
+      </div>
+    {% endif %}
+  </div>
 </article>
-{% if site.hide_post_date != true %}
-  {% include post-date.html %}
-{% endif %}
-{% if site.hide_post_share != true %}
-  {% include social-sharing.html %}
-{% endif %}
-{% if site.hide_related_posts != true %}
-  {% include related-posts.html %}
-{% endif %}
-{% if site.data.settings.disqus.comments %}
-  {% include disqus.html %}
-{% endif %}

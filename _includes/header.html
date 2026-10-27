@@ -1,13 +1,28 @@
-<header class="header">
-  <div class="header-banner-wrapper">
-    <a href="{{ site.github.url }}/" class="header-banner-link">
-      <img src="{{ site.github.url }}/assets/img/banner.jpg" alt="{{ site.title }} Banner" class="banner-img">
-      <div class="banner-glass-pill">
-        <span class="banner-badge">Taiwan Travel Guide</span>
-        <h1 class="banner-title">{{ site.title }}</h1>
-        <p class="banner-tagline">{{ site.description }}</p>
+<header class="site-header">
+  <div class="header-inner">
+    <div class="site-branding">
+      <a href="{{ site.github.url }}/" class="brand-link">
+        <span class="brand-badge">TAIWAN</span>
+        <span class="brand-name">ABC TRAVEL BLOG</span>
+      </a>
+    </div>
+
+    <nav class="main-navigation">
+      <ul class="nav-menu">
+        <li><a href="{{ site.github.url }}/">Home</a></li>
+        {% for item in site.data.settings.menu %}
+          <li><a href="{{ site.github.url }}/{{ item.url }}">{{ item.name }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <div class="header-social">
+        {% include social-icons.html %}
       </div>
-    </a>
+      <div class="header-dark-toggle">
+        {% include dark-mode.html %}
+      </div>
+    </div>
   </div>
-  {% include menu.html %}
 </header>

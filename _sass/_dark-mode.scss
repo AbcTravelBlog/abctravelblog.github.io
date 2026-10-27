@@ -1,137 +1,195 @@
 /*
-  Dark Mode
+  Dark Mode Overrides - Magazine & Editorial Theme
 */
 
 #darkModeToggle {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
-  color: $light-gray-color;
-  padding: 0 6px;
-  vertical-align: middle;
+  font-size: 1.05rem;
+  color: #64748b;
+  padding: 4px 8px;
+  border-radius: 6px;
   outline: none;
-  transition: color 0.3s ease, transform 0.2s ease;
+  transition: all 0.2s ease;
 
   &:hover {
     color: #f59e0b;
-    transform: scale(1.15);
+    background-color: rgba(245, 158, 11, 0.1);
   }
 }
 
 html.dark-theme,
 html.dark-theme body,
 body.dark-theme {
-  background-color: #16181a !important;
-  color: #d1d5db !important;
+  background-color: #0b0f17 !important;
+  color: #cbd5e1 !important;
 
   h1, h2, h3, h4, h5, h6 {
-    color: #f3f4f6;
-  }
-
-  h1 a, .header-title a {
-    color: #f3f4f6;
+    color: #f8fafc;
   }
 
   a {
-    color: #93c5fd;
-
+    color: #38bdf8;
     &:hover {
-      color: #bfdbfe;
+      color: #7dd3fc;
     }
   }
 
-  .header-subtitle,
-  .footer,
-  .footer a,
-  .footer-description,
-  .post-date,
-  .menu-content a,
-  .social-icons a {
-    color: #9ca3af;
-  }
+  /* Header */
+  .site-header {
+    background-color: rgba(11, 15, 23, 0.95);
+    border-bottom-color: #1e293b;
 
-  .header a:hover,
-  .footer a:hover,
-  .menu-content a:hover,
-  .social-icons a:hover {
-    color: #ffffff;
+    .brand-name {
+      color: #f8fafc;
+    }
+
+    .main-navigation .nav-menu li a {
+      color: #94a3b8;
+      &:hover {
+        color: #f8fafc;
+      }
+    }
+
+    .header-social a {
+      color: #94a3b8;
+      &:hover {
+        color: #f8fafc;
+      }
+    }
   }
 
   #darkModeToggle {
     color: #facc15;
-  }
-
-  blockquote {
-    border-left-color: #374151;
-    color: #9ca3af;
-  }
-
-  hr {
-    border-top-color: #374151;
-  }
-
-  table, th, td {
-    border-color: #374151;
-  }
-
-  .pagination-button {
-    border-color: #374151;
-    color: #9ca3af;
-  }
-
-  .pagination-active {
-    color: #93c5fd;
-
     &:hover {
-      background-color: #1f2937;
+      background-color: rgba(250, 204, 21, 0.15);
     }
   }
 
-  .home-hero-intro {
-    background-color: #1f2428;
-    border-left-color: #3b82f6;
+  /* Cards & Sections */
+  .article-card,
+  .sidebar-widget,
+  .page-body,
+  .post-body-content,
+  .archive-entry,
+  .magazine-pagination,
+  .post-comments-section,
+  .gallery-item {
+    background-color: #151d2a !important;
+    border-color: #1e293b !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  }
 
-    .hero-tagline {
-      color: #e5e7eb;
+  .card-title a,
+  .archive-title a,
+  .essentials-list li a strong,
+  .author-name,
+  .widget-title {
+    color: #f8fafc !important;
+  }
+
+  .card-excerpt,
+  .author-bio,
+  .widget-desc,
+  .essentials-list li a span,
+  .card-meta,
+  .archive-meta,
+  .page-subtitle {
+    color: #94a3b8 !important;
+  }
+
+  .section-header,
+  .archive-year-heading,
+  .card-footer,
+  .essentials-list li,
+  .widget-title,
+  .post-body-content h2,
+  .comments-heading {
+    border-color: #1e293b !important;
+  }
+
+  .post-share-section {
+    background-color: #151d2a;
+    border-color: #1e293b;
+    .share-title {
+      color: #f8fafc;
+    }
+  }
+
+  .sidebar-btn {
+    background-color: #1e293b;
+    color: #f8fafc;
+    border-color: #334155;
+
+    &:hover {
+      background-color: #334155;
+    }
+
+    &.primary-btn {
+      background-color: #dc2626;
+      color: #ffffff;
+      border-color: #dc2626;
+
+      &:hover {
+        background-color: #b91c1c;
+      }
+    }
+  }
+
+  .pagination-btn {
+    &.active {
+      background-color: #1e293b;
+      color: #f8fafc;
+      border: 1px solid #334155;
+
+      &:hover {
+        background-color: #dc2626;
+      }
+    }
+
+    &.disabled {
+      color: #475569;
     }
   }
 
   .contact-form {
     input, textarea {
-      background-color: #1f2428;
-      color: #f3f4f6;
-      border-color: #374151;
+      background-color: #0f172a;
+      color: #f8fafc;
+      border-color: #334155;
 
       &:focus {
-        border-color: #60a5fa;
-        outline: none;
+        border-color: #38bdf8;
       }
     }
 
     .submit-button {
-      background-color: #2563eb;
+      background-color: #dc2626;
       color: #ffffff;
 
       &:hover {
-        background-color: #1d4ed8;
+        background-color: #b91c1c;
       }
     }
   }
 
-  .gallery-item {
-    background-color: #1f2428;
-    border-color: #2e3440;
-
-    .gallery-caption {
-      color: #e5e7eb;
-      span {
-        color: #9ca3af;
-      }
-    }
+  blockquote {
+    background-color: #1e293b;
+    border-left-color: #f59e0b;
+    color: #fef3c7;
   }
 
-  code, pre {
-    background-color: #111827;
+  table {
+    th {
+      background-color: #1e293b;
+      color: #f8fafc;
+    }
+    th, td {
+      border-color: #334155;
+    }
+    tr:nth-child(even) {
+      background-color: #101726;
+    }
   }
 }
