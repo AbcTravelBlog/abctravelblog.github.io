@@ -1,9 +1,13 @@
 <header class="header">
-  <h3 class="header-title">
-    <a href="{{ site.github.url }}/">
-      <img src="assets/img/banner.jpg" alt="Website Banner" class="banner">
+  <div class="header-banner-wrapper">
+    <a href="{{ site.github.url }}/" class="header-banner-link">
+      <img src="{{ site.github.url }}/assets/img/banner.jpg" alt="{{ site.title }} Banner" class="banner-img">
+      <div class="banner-glass-pill">
+        <span class="banner-badge">Taiwan Travel Guide</span>
+        <h1 class="banner-title">{{ site.title }}</h1>
+        <p class="banner-tagline">{{ site.description }}</p>
+      </div>
     </a>
-    <small class="header-subtitle">{{ site.description }}</small>
-    {% include menu.html %} <!-- all icons go here -->
-  </h3>
+  </div>
+  {% include menu.html %}
 </header>
