@@ -128,7 +128,130 @@ body.dark-theme {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
   }
 
-  .card-title a,
+  /* Article Post Body Typography */
+  .post-body-content {
+    color: #e2e8f0 !important;
+
+    p, li, span, td, dd, dt {
+      color: #e2e8f0 !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #ffffff !important;
+      border-color: #1e293b !important;
+    }
+
+    strong, b {
+      color: #ffffff !important;
+      font-weight: 700;
+    }
+
+    em, i {
+      color: #f1f5f9 !important;
+    }
+
+    a {
+      color: #38bdf8 !important;
+      &:hover {
+        color: #7dd3fc !important;
+      }
+    }
+
+    code {
+      background-color: rgba(255, 255, 255, 0.1) !important;
+      color: #fde047 !important;
+      border-color: rgba(255, 255, 255, 0.15) !important;
+    }
+
+    hr {
+      border-color: #1e293b !important;
+    }
+  }
+
+  /* Single Article Post Header */
+  .single-post-article {
+    .post-headline {
+      color: #ffffff !important;
+    }
+
+    .post-byline {
+      color: #cbd5e1 !important;
+
+      span, a, time {
+        color: #cbd5e1 !important;
+      }
+
+      .byline-sep {
+        color: #475569 !important;
+      }
+
+      i {
+        color: #94a3b8 !important;
+      }
+    }
+  }
+
+  /* Page Body (About, Contact, Gallery) */
+  .page-body {
+    color: #e2e8f0 !important;
+
+    p, li, span, td {
+      color: #e2e8f0 !important;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      color: #ffffff !important;
+    }
+
+    strong, b {
+      color: #ffffff !important;
+    }
+
+    a {
+      color: #38bdf8 !important;
+      &:hover {
+        color: #7dd3fc !important;
+      }
+    }
+
+    hr {
+      border-color: #1e293b !important;
+    }
+  }
+
+  /* Article Cards on Feed / Archive */
+  .article-card {
+    .card-title a {
+      color: #ffffff !important;
+      &:hover {
+        color: #38bdf8 !important;
+      }
+    }
+
+    .card-excerpt {
+      color: #cbd5e1 !important;
+    }
+
+    .card-meta {
+      color: #cbd5e1 !important;
+
+      span, time {
+        color: #cbd5e1 !important;
+      }
+
+      i {
+        color: #94a3b8 !important;
+      }
+    }
+
+    .read-more-btn {
+      color: #f87171 !important;
+      &:hover {
+        color: #fca5a5 !important;
+      }
+    }
+  }
+
   .archive-title a,
   .essentials-list li a strong,
   .author-name,
@@ -136,14 +259,13 @@ body.dark-theme {
     color: #f8fafc !important;
   }
 
-  .card-excerpt,
   .author-bio,
   .widget-desc,
   .essentials-list li a span,
-  .card-meta,
   .archive-meta,
-  .page-subtitle {
-    color: #94a3b8 !important;
+  .page-subtitle,
+  .section-subtitle {
+    color: #cbd5e1 !important;
   }
 
   .section-header,
@@ -151,7 +273,6 @@ body.dark-theme {
   .card-footer,
   .essentials-list li,
   .widget-title,
-  .post-body-content h2,
   .comments-heading {
     border-color: #1e293b !important;
   }
