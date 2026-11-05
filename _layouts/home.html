@@ -2,17 +2,28 @@
 layout: default
 ---
 
-<!-- Taiwan Obsessed Style Hero Section -->
-<section class="home-hero-section">
-  <div class="hero-bg-overlay"></div>
-  <div class="hero-content-wrapper">
-    <span class="hero-kicker">NATIVE INSIDER TRAVEL GUIDES</span>
-    <h1 class="hero-headline">The Ultimate Taiwan Travel Blog</h1>
-    <p class="hero-subhead">
-      Your one-stop spot for exploring Taiwan: vibrant night markets, marble canyon hikes, alpine bike routes, and practical transit secrets.
+<!-- Taiwan Obsessed Style Top Image Banner -->
+<section class="taiwan-hero-banner">
+  <div class="banner-image-container">
+    <img src="{{ site.github.url }}/assets/img/banner.jpg" alt="Taiwan Skyline & Landscape" class="banner-photo">
+    <div class="hero-card-overlay">
+      <h2 class="hero-card-title">Your One-Stop Spot for all Things Taiwan</h2>
+      <div class="hero-card-wave">〰〰〰</div>
+      <p class="hero-card-byline">by Taiwan travel expert <strong>{{ site.author }}</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- Sub-Hero Title & Quick Filter Pills -->
+<section class="home-intro-section">
+  <div class="page-container">
+    <span class="intro-kicker">NATIVE INSIDER TRAVEL GUIDES</span>
+    <h1 class="intro-headline">The Ultimate Taiwan Travel Blog</h1>
+    <p class="intro-subhead">
+      Planning a trip to Taiwan? Here you'll find native insights on vibrant night markets, marble canyon hikes, scenic bike trails, and practical transit secrets.
     </p>
 
-    <!-- Quick Category Filter Pills -->
+    <!-- Category Filter Pills -->
     <div class="hero-category-pills">
       <a href="{{ site.github.url }}/writing" class="pill-btn active"><i class="fa fa-compass"></i> All Guides</a>
       <a href="{{ site.github.url }}/taipei-night-markets-guide" class="pill-btn"><i class="fa fa-cutlery"></i> Night Markets</a>
@@ -100,13 +111,13 @@ layout: default
       
       <!-- Author Card -->
       <div class="sidebar-widget author-card-widget">
-        <div class="author-avatar-wrapper">
-          <img src="{{ site.github.url }}/assets/img/banner.jpg" alt="Justin Liao" class="author-avatar">
+        <div class="author-avatar-badge">
+          <i class="fa fa-compass" aria-hidden="true"></i>
         </div>
         <h4 class="author-name">Hi, I'm {{ site.author }} 👋</h4>
-        <span class="author-title">Native Taiwanese Travel Enthusiast</span>
+        <span class="author-title">Native Taiwanese Travel Guide</span>
         <p class="author-bio">
-          Born and raised in Taiwan, I created this blog to provide unvarnished, authentic advice so you can experience Taiwan like a local—from secret night market stalls to quiet mountain lookouts.
+          Born and raised in Taiwan, I created ABC Travel Blog to provide unvarnished, authentic advice so you can experience Taiwan like a local - from secret night market stalls to quiet mountain lookouts.
         </p>
         <a href="{{ site.github.url }}/about" class="sidebar-btn">About My Story →</a>
       </div>

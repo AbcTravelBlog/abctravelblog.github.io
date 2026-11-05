@@ -67,6 +67,53 @@ body.dark-theme {
     }
   }
 
+  /* Hero & Banner */
+  .taiwan-hero-banner .hero-card-overlay {
+    background: rgba(15, 23, 42, 0.88) !important;
+    border-color: rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5) !important;
+
+    .hero-card-title {
+      color: #f8fafc !important;
+    }
+
+    .hero-card-byline {
+      color: #cbd5e1 !important;
+      strong {
+        color: #f8fafc !important;
+      }
+    }
+  }
+
+  .home-intro-section {
+    .intro-headline {
+      color: #f8fafc !important;
+    }
+    .intro-subhead {
+      color: #cbd5e1 !important;
+    }
+  }
+
+  .hero-category-pills .pill-btn {
+    background-color: #151d2a !important;
+    border-color: #334155 !important;
+    color: #cbd5e1 !important;
+
+    i {
+      color: #f87171 !important;
+    }
+
+    &:hover, &.active {
+      background-color: #1e293b !important;
+      border-color: #64748b !important;
+      color: #ffffff !important;
+
+      i {
+        color: #facc15 !important;
+      }
+    }
+  }
+
   /* Cards & Sections */
   .article-card,
   .sidebar-widget,

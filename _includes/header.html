@@ -1,13 +1,13 @@
 <header class="site-header">
   <div class="header-inner">
-    <div class="site-branding">
+    <div class="header-brand-wrap">
       <a href="{{ site.github.url }}/" class="brand-link">
         <span class="brand-badge">TAIWAN</span>
         <span class="brand-name">ABC TRAVEL BLOG</span>
       </a>
     </div>
 
-    <nav class="main-navigation">
+    <nav class="main-navigation" aria-label="Main Navigation">
       <ul class="nav-menu">
         <li><a href="{{ site.github.url }}/">Home</a></li>
         {% for item in site.data.settings.menu %}

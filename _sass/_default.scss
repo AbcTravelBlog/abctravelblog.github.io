@@ -34,7 +34,7 @@
   gap: 1.5rem;
 }
 
-.site-branding {
+.header-brand-wrap {
   display: flex;
   align-items: center;
 
@@ -62,6 +62,7 @@
     font-weight: 700;
     letter-spacing: 0.05em;
     color: #0f172a;
+    white-space: nowrap;
   }
 }
 
@@ -119,18 +120,50 @@
 
 @media (max-width: 860px) {
   .header-inner {
-    flex-wrap: wrap;
     padding: 0.75rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem 0.75rem;
+  }
+
+  .header-brand-wrap {
+    order: 1;
+
+    .brand-name {
+      font-size: 1.1rem;
+    }
+  }
+
+  .header-actions {
+    order: 2;
+    gap: 0.75rem;
+
+    .header-social {
+      gap: 0.5rem;
+      a {
+        font-size: 0.88rem;
+      }
+    }
   }
 
   .main-navigation {
     order: 3;
     width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-top: 1px solid #f1f5f9;
     padding-top: 0.5rem;
+    padding-bottom: 0.25rem;
 
     .nav-menu {
+      display: flex;
+      align-items: center;
       gap: 1.25rem;
+      white-space: nowrap;
+      margin: 0;
+      padding: 0;
     }
   }
 }
